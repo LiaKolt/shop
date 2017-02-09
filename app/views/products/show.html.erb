@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%=t :title%></strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong><%=t :description%></strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong><%=t :price%></strong>
+  <%= @product.price %>
+</p>
+
+
+<%= link_to 'Back', root_path %>

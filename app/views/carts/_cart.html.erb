@@ -1,0 +1,39 @@
+<div class="panel-body">
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%=t :product%></th>
+    <th><%=t :quantity%></th>
+    <th><%=t :price%></th>
+    <th><%=t :total%></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @cart.order_items.each do |item| %>
+      <tr>
+        <td><%= item.product.title %></td>
+        <td><%= item.quantity %></td>
+        <td><%= item.product.price %></td>
+        <td><%= item.total_sum %></td>
+        <td><%= link_to (t :delete).to_s, item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+  <% end %>
+    <tr class="total_line">
+       <td colspan="3"><%=t :total%></td>
+       <td class="total_cell"><%= @cart.total_sum %></td>
+     </tr>
+
+  </tbody>
+</table>
+
+
+<%= button_to (t :ClearCart).to_s, @cart, method: :delete,
+                  data: { confirm: 'Are you sure?' } , class:"btn btn-lg btn-primary hor" %>
+<%= link_to (t :order).to_s, new_order_path, method: :get, class:"btn btn-lg btn-primary orderLink hor", remote:true%>
+</div>
+
+
+

@@ -1,0 +1,26 @@
+ru:
+  hello: "Интернет магазин"
+  title: Название
+  description: Описание
+  price: Цена
+  cart: Корзина
+  product: Товар
+  quantity: Количество
+  total: Всего
+  AddToCart: Добавить в корзину
+  ClearCart: Очистить корзину
+  order: Оформить заказ
+  back: Назад
+  show: Смотреть
+  delete: Удалить
+  submit: Подтвердить
+  activerecord:
+    attributes:
+      order:
+        name: Имя
+        phone: Телефон
+        email:  Электронный адрес
+
+
+
+

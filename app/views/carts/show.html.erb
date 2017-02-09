@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><%= t :cart%> </div>
+
+    <%=render @cart%>
+
+</div>
+<div id="order">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%=render 'form'%>
+    </div>
+  </div>
+
+</div>
+<%= link_to (t :back).to_s, root_path %>
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+<%=form_for @order  do |f|%>
+    <div class="field">
+      <%= f.label :name, Order.human_attribute_name(:name) %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone, Order.human_attribute_name(:phone) %>
+      <%= f.text_field :phone %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email, Order.human_attribute_name(:email) %>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit  t :submit %>
+    </div>
+<%end%>

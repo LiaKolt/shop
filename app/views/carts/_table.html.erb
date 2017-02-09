@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Товар</th>
+    <th>Количество</th>
+    <th>Цена</th>
+    <th>Всего</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @cart.order_items.each do |item| %>
+    <tr>
+      <td><%= item.product.title %></td>
+      <td><%= item.quantity %></td>
+      <td><%= item.product.price %></td>
+      <td><%= item.total_sum %></td>
+
+    </tr>
+    <% end %>
+    <tr class="total_line">
+       <td colspan="3">Всего</td>
+       <td class="total_cell"><%= @cart.total_sum %></td>
+       </tr>
+      </table>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%=t :title%></th>
+    <th><%=t :description%></th>
+    <th><%=t :price%></th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td><%= link_to (t :show).to_s, product%></td>
+        <td><%= button_to (t :AddToCart).to_s, order_items_path(product_id: product) %></td>
+
+      </tr>
+  <% end %>
+  </tbody>
+</table>
